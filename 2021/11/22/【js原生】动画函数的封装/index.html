@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,11 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2021 - Hexo</title>
+  <title>【js原生】动画函数的封装 - Hexo</title>
   
 
+  
+    <meta name="description" content="封装animate.js动画函数">
   
 
   <!-- feed -->
@@ -104,7 +104,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -355,7 +355,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -431,325 +431,276 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E5%9F%BA%E7%A1%80%E3%80%91%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/">
-        【js基础】数组常用方法总结
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>数组常用方法总结</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E5%9F%BA%E7%A1%80%E3%80%91%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
   
-  
-  
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/">
-        【js进阶】防抖节流
-      </a>
-    </h2>
-  
-  <div class='md'>
     
-      <p>防抖节流</p>
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E9%87%8D%E5%86%99%E8%BD%AE%E6%92%AD%E5%9B%BE/">
-        【js原生】重写轮播图
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>手写banner</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E9%87%8D%E5%86%99%E8%BD%AE%E6%92%AD%E5%9B%BE/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/">
+      <h1 class="title">
         【js原生】动画函数的封装
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>封装animate.js动画函数</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      </h1>
+      <div class='new-meta-box'>
         
-        <time>2021-11-22</time>
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>kyleee</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Nov 22, 2021</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="【js原生】动画函数的封装" data-path="/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>封装animate.js动画函数</p>
+<span id="more"></span>
+
+<h1 id="动画函数的封装"><a href="#动画函数的封装" class="headerlink" title="动画函数的封装"></a>动画函数的封装</h1><h2 id="匀速动画"><a href="#匀速动画" class="headerlink" title="匀速动画"></a>匀速动画</h2><p><strong>核心原理</strong>：通过定时器setInterval()不断移动盒子位置。</p>
+<p>实现步骤：</p>
+<p>1.获取盒子当前位置：offsetLeft</p>
+<p>2.让盒子在当前位置加上1个移动距离: element.style.left</p>
+<p>3.利用定时器不断重复这个操作：setInterval(fn, delay)</p>
+<p>4.加上一个定时器的条件</p>
+<p>5.注意此元素需要添加定位</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">   <span class="attribute">position</span>: absolute;   // 必须添加定位</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">   <span class="attribute">background-color</span>:orange</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>对动画函数animate的封装，需要传入四个参数：</p>
+<p>obj： 需要做动画的元素</p>
+<p>target:：移动的目标距离</p>
+<p>delay： 多久调用一次定时器，值越小，移动的速度越快</p>
+<p>callback：动画执行完毕之后，执行的回调函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params">obj,target,delay,callback</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// obj.timer 给不同的元素指定不同的定时器</span></span><br><span class="line">  obj.timer = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span>(obj.offsetLeft &gt; target) &#123;</span><br><span class="line">    <span class="comment">// 停止动画，本质就是停止定时器</span></span><br><span class="line">     <span class="built_in">clearInterval</span>(obj.timer);</span><br><span class="line">    <span class="comment">// 回调函数写在定时器停止之后</span></span><br><span class="line">      callback &amp;&amp; callback();</span><br><span class="line">  &#125;     </span><br><span class="line">    <span class="comment">// offsetLeft是只读属性，只能用来获取值，不能赋值，赋值要用element.style.left</span></span><br><span class="line">     obj.style.left = obj.offsetLeft + <span class="number">10</span> + <span class="string">&#x27;px&#x27;</span>    </span><br><span class="line">  &#125;, delay);       </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.box&#x27;</span>);</span><br><span class="line">  <span class="comment">// 调用函数</span></span><br><span class="line">animate(box, <span class="number">400</span>, <span class="number">30</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    <span class="comment">// 运动到400时，弹出对话框</span></span><br><span class="line">      alert(<span class="string">&#x27;已经移动到400&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+
+<p>以上是基本动画函数封装，但是假如现在有一个新需求，就是点击按钮之后，再让盒子做动画呢?</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>:orange</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.btn</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>:<span class="number">120px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span>&gt;</span>按钮点击后运动<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params">obj,target,delay,callback</span>) </span>&#123;</span><br><span class="line">  obj.timer = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span>(obj.offsetLeft &gt; target) &#123;</span><br><span class="line">     <span class="built_in">clearInterval</span>(obj.timer);</span><br><span class="line">  &#125;      </span><br><span class="line">    obj.style.left = obj.offsetLeft + <span class="number">10</span> + <span class="string">&#x27;px&#x27;</span>    </span><br><span class="line">  &#125;, delay);       </span><br><span class="line">&#125;</span><br><span class="line">  <span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.box&#x27;</span>);</span><br><span class="line">  <span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.btn&#x27;</span>)</span><br><span class="line">  btn.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   animate(box, <span class="number">400</span>, <span class="number">30</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>但是这样写的话会有一个<strong>bug</strong>，就是连续点击按钮的时候，盒子的移动速度会慢慢变快，因为在内存中会不断创建新的定时器，定时器越多，物体移动就越快。因此，<strong>需要在调用定时器之前先清除掉内存中已有的定时器，使得只有一个定时器执行。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params">obj,target,delay,callback</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">clearInterval</span>(obj.timer)        <span class="comment">// 先清除掉先前的定时器，只保留当前的一个定时器执行</span></span><br><span class="line">  obj.timer = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span>(obj.offsetLeft &gt; target) &#123;</span><br><span class="line">     <span class="built_in">clearInterval</span>(obj.timer);</span><br><span class="line">  &#125;      </span><br><span class="line">    obj.style.left = obj.offsetLeft + <span class="number">10</span> + <span class="string">&#x27;px&#x27;</span>    </span><br><span class="line">  &#125;, delay);       </span><br><span class="line">&#125;</span><br><span class="line">  <span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.box&#x27;</span>);</span><br><span class="line">  <span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.btn&#x27;</span>)</span><br><span class="line">  btn.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   animate(box, <span class="number">400</span>, <span class="number">30</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="缓动动画"><a href="#缓动动画" class="headerlink" title="缓动动画"></a>缓动动画</h2><p><strong>原理</strong>：让盒子的每次移动的距离慢慢变小，速度就会慢慢落下来。</p>
+<p><strong>计算公式：</strong> (目标值 - 现在的位置 ) / 10 </p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4e28e440f867422bad9679fdc6fb0381~tplv-k3u1fbpfcp-watermark.image" class="lazyload" data-srcset="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4e28e440f867422bad9679fdc6fb0381~tplv-k3u1fbpfcp-watermark.image" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Snipaste_2021-11-14_10-08-01.png"></p>
+<p><strong>注意：</strong> 这里的步长值step会出现小数的情况，要把它取整，否则会使移动的位置不准确。并且还要区分是正数还是负数，如果向左移动就是负数，向下取整(Math.floor)，向右移动就是正数，向上取整(Math.ceil)。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-class">.box</span>&#123;</span><br><span class="line">   <span class="attribute">position</span>: absolute;</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">   <span class="attribute">background-color</span>:orange</span><br><span class="line">&#125;</span><br><span class="line"> <span class="selector-class">.btn1</span>&#123;</span><br><span class="line">   <span class="attribute">position</span>: absolute;</span><br><span class="line">   <span class="attribute">top</span>:<span class="number">120px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> <span class="selector-class">.btn2</span>&#123;</span><br><span class="line">   <span class="attribute">position</span>: absolute;</span><br><span class="line">   <span class="attribute">top</span>:<span class="number">120px</span>;</span><br><span class="line">   <span class="attribute">left</span>: <span class="number">120px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn1&quot;</span>&gt;</span>点击后运动800<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn2&quot;</span>&gt;</span>点击后运动500<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params">obj,target,delay,callback</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">clearInterval</span>(obj.timer)</span><br><span class="line">  obj.timer = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> step = (target - obj.offsetLeft) / <span class="number">10</span>     <span class="comment">// 计算步长，这步要写在定时器里面</span></span><br><span class="line">  step = step &gt; <span class="number">0</span> ? <span class="built_in">Math</span>.ceil(step) : <span class="built_in">Math</span>.floor(step)  <span class="comment">// 进行判断</span></span><br><span class="line">  <span class="keyword">if</span>(obj.offsetLeft == target) &#123;</span><br><span class="line">     <span class="built_in">clearInterval</span>(obj.timer);</span><br><span class="line">  &#125;   </span><br><span class="line">    obj.style.left = obj.offsetLeft + step + <span class="string">&#x27;px&#x27;</span>    </span><br><span class="line">  &#125;, delay);       </span><br><span class="line">&#125;</span><br><span class="line">  <span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.box&#x27;</span>);</span><br><span class="line">  <span class="keyword">var</span> btn1 = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.btn1&#x27;</span>)</span><br><span class="line">  <span class="keyword">var</span> btn2 = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.btn2&#x27;</span>)</span><br><span class="line">  btn1.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   animate(box, <span class="number">800</span>, <span class="number">30</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">  btn2.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   animate(box, <span class="number">500</span>, <span class="number">30</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="具体案例"><a href="#具体案例" class="headerlink" title="具体案例"></a>具体案例</h2><p>我们已经将动画函数封装成函数，在需要用的地方进行调用animate。</p>
+<p>需求：鼠标经过sliderbar，导航懒从右往左移滑动出来，箭头改变，<br>      鼠标离开sliderbar，导航栏从左往右滑动回去，箭头改变。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-class">.sliderbar</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.con</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: purple;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;sliderbar&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span>&gt;</span>→<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;con&quot;</span>&gt;</span>问题反馈<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">var</span> sliderbar = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.sliderbar&#x27;</span>)</span><br><span class="line">   <span class="keyword">var</span> con = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.con&#x27;</span>)</span><br><span class="line">   sliderbar.addEventListener(<span class="string">&#x27;mouseenter&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     animate(con, <span class="number">0</span>, <span class="number">15</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="comment">// 当动画执行完毕，就把 → 改为 ←</span></span><br><span class="line">      sliderbar.children[<span class="number">0</span>].innerHTML = <span class="string">&#x27;←&#x27;</span></span><br><span class="line">   &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">   sliderbar.addEventListener(<span class="string">&#x27;mouseleave&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     animate(con, -<span class="number">160</span>, <span class="number">15</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      sliderbar.children[<span class="number">0</span>].innerHTML = <span class="string">&#x27;→&#x27;</span></span><br><span class="line">   &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://example.com/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/>http://example.com/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-11-22T13:20:10+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Nov 22, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91offsetLeft%E3%80%81offsetWidth%E3%80%81clientHeight%E3%80%81scrollLeft%E3%80%81scrollHeight.....%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">
-        【js基础】offsetLeft、offsetWidth、clientHeight、scrollLeft、scrollHeight.....的区别？
-      </a>
-    </h2>
-  
-  <div class='md'>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/&title=【js原生】动画函数的封装 - Hexo&summary=封装animate.js动画函数"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
     
-      <p>offset、client、scroll、event..</p>
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/&title=【js原生】动画函数的封装 - Hexo&summary=封装animate.js动画函数"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/&title=【js原生】动画函数的封装 - Hexo&summary=封装animate.js动画函数"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</div>
+
+
+
         
-        <time>2021-11-22</time>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91offsetLeft%E3%80%81offsetWidth%E3%80%81clientHeight%E3%80%81scrollLeft%E3%80%81scrollHeight.....%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/'>
-            Read More
-          </a>
-        </div>
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E9%87%8D%E5%86%99%E8%BD%AE%E6%92%AD%E5%9B%BE/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【js原生】重写轮播图</p>
+          <p class='content'>手写banner
+
+
+轮播图的实现结构搭建
+123456789101112131415161718192021222324252627282930313233343536373839404142...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91offsetLeft%E3%80%81offsetWidth%E3%80%81clientHeight%E3%80%81scrollLeft%E3%80%81scrollHeight.....%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/'>
+          <p class='title'>【js基础】offsetLeft、offsetWidth、clientHeight、scrollLeft、scrollHeight.....的区别？<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>offset、client、scroll、event..
+
+
+offset系列1.offsetLeft和offsetTop只读属性。要确定这两个属性的值，首先要确定元素的offsetParent...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90%E9%9D%A2%E8%AF%95%E3%80%91%E5%B8%B8%E8%A7%81%E6%89%8B%E5%86%99%E9%A2%98/">
-        【面试】常见手写题
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>常见手写题</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90%E9%9D%A2%E8%AF%95%E3%80%91%E5%B8%B8%E8%A7%81%E6%89%8B%E5%86%99%E9%A2%98/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">
-        【算法】算法总结
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>包含力扣题</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -757,87 +708,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Hexo</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
+  <header>
     
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
 
-  
 
-  
-    
-    
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%80%E9%80%9F%E5%8A%A8%E7%94%BB"><span class="toc-text">匀速动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB"><span class="toc-text">缓动动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%A1%88%E4%BE%8B"><span class="toc-text">具体案例</span></a></li></ol>
+    </div>
+  </section>
 
-  
 
   
 
 
 </aside>
+
 
 
 		  
@@ -846,21 +738,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="【js原生】动画函数的封装";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>

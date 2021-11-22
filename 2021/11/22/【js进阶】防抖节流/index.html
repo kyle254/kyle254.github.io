@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,11 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2021 - Hexo</title>
+  <title>【js进阶】防抖节流 - Hexo</title>
   
 
+  
+    <meta name="description" content="防抖节流">
   
 
   <!-- feed -->
@@ -104,7 +104,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -355,7 +355,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -431,325 +431,279 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E5%9F%BA%E7%A1%80%E3%80%91%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/">
-        【js基础】数组常用方法总结
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>数组常用方法总结</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E5%9F%BA%E7%A1%80%E3%80%91%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
   
-  
-  
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/">
+    
+    
+      <h1 class="title">
         【js进阶】防抖节流
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>防抖节流</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      </h1>
+      <div class='new-meta-box'>
         
-        <time>2021-11-22</time>
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>kyleee</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Nov 22, 2021</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="【js进阶】防抖节流" data-path="/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>防抖节流</p>
+<span id="more"></span>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>防抖和节流对大家来说应该都不陌生，不仅是在面试中还是在实际开发中，经常会遇到防抖和节流的问题。对于很多初学的小伙伴，可能对于这两者的概念的都没有区分清楚，更不知道在哪些应用场景下用防抖还是节流。所以，本文主要带着大家来区分这两者的区别、具体的应用场景以及手写这两个函数。</p>
+<h1 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h1><h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>我们都遇到过这样的场景，<strong>在某个搜索框中输入自己想要搜索的内容</strong></p>
+<p>比如想要输入一个 javascript,</p>
+<p>当输入第一字符j时，为了更好的用户体验，通常会出现对应的联想内容，这些联想内容通常是保存在服务器的<br>一次网络请求；</p>
+<p>当输入ja时，再次发送网络请求，那么输入javascript一共需要10次网络请求，大大损耗我们整个系统的性能，无论是前端的事件处理，还是对于服务器的压力;</p>
+<p>那么，我们只需要在合适的情况下发送网络请求。比如用户快速的输入了javascript，那么只发送一次网络请求，或者如果用户是输入一个j想了一会儿，这个时候j确实应该发送一次网络请求；</p>
+<p>也就是我们应该监听用户在某个时间，比如500ms内，没有再次触发时间时，再发送网络请求；</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8caa3e37a50a45c4a5df4882ac7a929d~tplv-k3u1fbpfcp-watermark.image" class="lazyload" data-srcset="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8caa3e37a50a45c4a5df4882ac7a929d~tplv-k3u1fbpfcp-watermark.image" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信截图_20211118195926.png"></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>防抖的定义：<strong>只有在某个时间内，没有再次触发某个函数时，才真正的调用这个函数</strong></p>
+<p>当事件触发时，相应的函数并不会立即触发，而是会等待一定的时间；</p>
+<p>当事件密集触发时，函数的触发会被频繁的推迟；</p>
+<p>只有等待了一段时间也没有事件触发，才会真正的执行响应函数；</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a6df35a3b1c34449bade92f609f1474c~tplv-k3u1fbpfcp-watermark.image" class="lazyload" data-srcset="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a6df35a3b1c34449bade92f609f1474c~tplv-k3u1fbpfcp-watermark.image" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信截图_20211118193140.png"></p>
+<h1 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h1><h2 id="场景-1"><a href="#场景-1" class="headerlink" title="场景"></a>场景</h2><p>很多人都玩过<strong>飞机大战</strong>的游戏，在飞机大战的游戏中，我们按下空格会发射一个子弹：</p>
+<p>很多飞机大战的游戏中会有这样的设定，即使按下的频率非常快，子弹也会保持一定的频率来发射；</p>
+<p>比如1秒钟只能发射一次，即使用户在这1秒钟按下了10次，子弹会保持发射一颗的频率来发射；</p>
+<p>但是事件是触发了10次的，响应的函数只触发了一次；</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ba9ec0d3cd240b49623061ad1fa60dc~tplv-k3u1fbpfcp-watermark.image" class="lazyload" data-srcset="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ba9ec0d3cd240b49623061ad1fa60dc~tplv-k3u1fbpfcp-watermark.image" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信截图_20211118200241.png"></p>
+<h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>节流的定义：<strong>规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。</strong></p>
+<p>当事件触发时，会执行这个事件的响应函数；</p>
+<p>如果这个事件会被频繁触发，那么节流函数会按照一定的频率来执行函数；</p>
+<p>不管在这个中间有多少次触发这个事件，执行函数的频繁总是固定的；</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cf1d7239477a4e77b782a2f20c58a7ee~tplv-k3u1fbpfcp-watermark.image" class="lazyload" data-srcset="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cf1d7239477a4e77b782a2f20c58a7ee~tplv-k3u1fbpfcp-watermark.image" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信截图_20211118200624.png"></p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="1-直接使用第三方工具库：-underscore-lodash"><a href="#1-直接使用第三方工具库：-underscore-lodash" class="headerlink" title="1.直接使用第三方工具库： underscore/lodash;"></a>1.直接使用第三方工具库： <strong>underscore/lodash;</strong></h2><p> underscore地址：<a target="_blank" rel="noopener" href="https://underscorejs.org/">https://underscorejs.org/</a></p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/efaac12b1f99486d9a44791b085e1926~tplv-k3u1fbpfcp-watermark.image" class="lazyload" data-srcset="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/efaac12b1f99486d9a44791b085e1926~tplv-k3u1fbpfcp-watermark.image" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信截图_20211118222739.png"></p>
+<h2 id="2-手写防抖函数"><a href="#2-手写防抖函数" class="headerlink" title="2.手写防抖函数"></a>2.手写防抖函数</h2><h3 id="2-1-基本的防抖函数"><a href="#2-1-基本的防抖函数" class="headerlink" title="2.1 基本的防抖函数"></a>2.1 基本的防抖函数</h3><p>index.html</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;./debounce.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">   <span class="keyword">const</span> input = <span class="built_in">document</span>.querySelector(<span class="string">&quot;input&quot;</span>)</span></span></span><br><span class="line"><span class="javascript"><span class="xml">   <span class="keyword">let</span> couter = <span class="number">0</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">   </span></span></span><br><span class="line"><span class="javascript"><span class="xml">   <span class="keyword">const</span> inputChange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="built_in">console</span>.log(<span class="string">`发送了第<span class="subst">$&#123;++couter&#125;</span>次请求`</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">   &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">   input.oninput = debounce(inputChange, <span class="number">2000</span>)</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>debounce.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, delay</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.定义一个定时器变量，来保存上次的定时器</span></span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span> </span><br><span class="line">    <span class="comment">// 2.真正执行的函数</span></span><br><span class="line">    <span class="keyword">const</span> _debounce = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 3.如果定时器存在，取消上一次的定时器</span></span><br><span class="line">      <span class="keyword">if</span>(timer) <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">      timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 外部传入的的函数</span></span><br><span class="line">        fn()</span><br><span class="line">      &#125;,delay)    </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _debounce</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-this和…agrs"><a href="#2-2-this和…agrs" class="headerlink" title="2.2 this和…agrs"></a>2.2 this和…agrs</h3><p>1.这里不能直接写的<code>fn()</code>，因为此时的<code>this</code>是指向<code>window</code>的，所以必须通过<code>fn.apply()</code>来改变this的指向，才能是<code>this</code>指向<code>input</code>对象。</p>
+<p>2.如果有参数，利用<code>...agrs</code>来接收。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, delay</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span> </span><br><span class="line">    <span class="keyword">const</span> _debounce = <span class="function"><span class="keyword">function</span> (<span class="params">...args</span>) </span>&#123;   <span class="comment">// ...args用来接收参数</span></span><br><span class="line">      <span class="keyword">if</span>(timer) <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">      timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        fn.apply(<span class="built_in">this</span>, args)    <span class="comment">// 利用apply改变this的指向input</span></span><br><span class="line">      &#125;,delay)     </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _debounce</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-立即执行"><a href="#2-3-立即执行" class="headerlink" title="2.3 立即执行"></a>2.3 立即执行</h3><p><strong>定义：</strong> 在第一次输入的时候，先立即发送一次网络请求，后面的输入就是正常的防抖。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, delay, immediate = <span class="literal">false</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span> </span><br><span class="line">    <span class="keyword">let</span> isInvoke = <span class="literal">false</span>     <span class="comment">// 设置一个新的自由变量来控制</span></span><br><span class="line">    <span class="keyword">const</span> _debounce = <span class="function"><span class="keyword">function</span> (<span class="params">...args</span>) </span>&#123;   </span><br><span class="line">      <span class="keyword">if</span>(timer) <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">      <span class="comment">// 判断是否立即执行</span></span><br><span class="line">      <span class="keyword">if</span>(immediate &amp;&amp; !isInvoke) &#123;</span><br><span class="line">        fn.apply(<span class="built_in">this</span>, args) </span><br><span class="line">        isInvoke = <span class="literal">true</span></span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        fn.apply(<span class="built_in">this</span>, args)</span><br><span class="line">        isInvoke = <span class="literal">false</span> </span><br><span class="line">      &#125;,delay)     </span><br><span class="line">      &#125;  </span><br><span class="line">    &#125;</span><br><span class="line">   <span class="keyword">return</span> _debounce</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4：取消功能"><a href="#2-4：取消功能" class="headerlink" title="2.4：取消功能"></a>2.4：取消功能</h3><p><strong>定义：</strong> 当用户输入输入到最后时(请求还没发送)，点击了取消按钮(相当于取消了发送)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">const</span> debounceChange = debounce(inputChange, <span class="number">3000</span>)</span><br><span class="line">    input.oninput = debounceChange</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 取消功能</span></span><br><span class="line">    <span class="keyword">const</span> cancelBtn = <span class="built_in">document</span>.quserySelector(<span class="string">&#x27;#cancel&#x27;</span>)</span><br><span class="line">    cancelBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     debounceChange.cancel()</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">fn, delay</span>) </span>&#123;       </span><br><span class="line">        <span class="keyword">let</span> timer = <span class="literal">null</span>      </span><br><span class="line">        <span class="keyword">const</span> _debounce = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;   </span><br><span class="line">         <span class="keyword">if</span>(timer) <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">         timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;     </span><br><span class="line">         fn()</span><br><span class="line">       &#125;,delay)   </span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 封装取消功能</span></span><br><span class="line">        _debounce.cancle = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          <span class="keyword">if</span>(timer) <span class="built_in">clearTimeout</span>(timer)   <span class="comment">// 清除最后的定时器</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">      &#125;</span><br><span class="line">    _</span><br><span class="line">    <span class="keyword">return</span> _debounce</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-手写节流函数"><a href="#3-手写节流函数" class="headerlink" title="3.手写节流函数"></a>3.手写节流函数</h2><p>节流比防抖稍微复杂一些，首要我们来理解一下节流的逻辑过程：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/50af9de4f884497197ce068f36daa6c1~tplv-k3u1fbpfcp-watermark.image" class="lazyload" data-srcset="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/50af9de4f884497197ce068f36daa6c1~tplv-k3u1fbpfcp-watermark.image" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Snipaste_2021-11-19_19-27-40.png"></p>
+<h3 id="3-1-基本的节流函数"><a href="#3-1-基本的节流函数" class="headerlink" title="3.1 基本的节流函数"></a>3.1 基本的节流函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">const</span> input = <span class="built_in">document</span>.querySelector(<span class="string">&quot;input&quot;</span>)</span><br><span class="line">   <span class="keyword">let</span> couter = <span class="number">0</span>;</span><br><span class="line">       </span><br><span class="line">   <span class="keyword">const</span> inputChange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`发送了第<span class="subst">$&#123;++couter&#125;</span>次请求`</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   input.oninput = debounce(inputChange, <span class="number">2000</span>)</span><br><span class="line"> </span><br><span class="line">   </span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn, interval</span>) </span>&#123;</span><br><span class="line">   <span class="comment">// 记录上一次开始时间</span></span><br><span class="line">   <span class="keyword">let</span> lastTime = <span class="number">0</span></span><br><span class="line">   <span class="comment">// 事件触发时，真正实行的函数</span></span><br><span class="line">   <span class="keyword">const</span> _throttle = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 获取当前事件触发的时间</span></span><br><span class="line">    <span class="keyword">const</span> nowTime = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">    <span class="comment">// 使用当前触发的时间</span></span><br><span class="line">    <span class="keyword">const</span> remainTime = interval - (nowTime - lastTime);</span><br><span class="line">    <span class="keyword">if</span>(remainTime &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="comment">//真正触发函数</span></span><br><span class="line">      fn();</span><br><span class="line">      <span class="comment">// 保留上次触发的时间</span></span><br><span class="line">      lastTime = nowTime</span><br><span class="line">    &#125;    </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> _throttle</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-this和…args"><a href="#3-2-this和…args" class="headerlink" title="3.2 this和…args"></a>3.2 this和…args</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fn, interval</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> lastTime = <span class="number">0</span></span><br><span class="line">    <span class="keyword">const</span> _throttle = <span class="function"><span class="keyword">function</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">const</span> nowTime = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">     <span class="keyword">const</span> remainTime = interval - (nowTime - lastTime);</span><br><span class="line">     <span class="keyword">if</span>(remainTime &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">      fn.apply(<span class="built_in">this</span>,args);</span><br><span class="line">      lastTime = nowTime</span><br><span class="line">    &#125;    </span><br><span class="line">  &#125;</span><br><span class="line">   <span class="keyword">return</span> _throttle</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><h2 id="防抖-1"><a href="#防抖-1" class="headerlink" title="防抖"></a>防抖</h2><p>1.输入框中频繁的输入内容，搜索或者提交信息；</p>
+<p>2.频繁的点击按钮，触发某个事件；</p>
+<p>3.监听浏览器滚动事件，完成某些特</p>
+<p>4.用户缩放浏览器的resize事件；</p>
+<h2 id="节流-1"><a href="#节流-1" class="headerlink" title="节流"></a>节流</h2><p>1.监听页面的滚动事件</p>
+<p>2.鼠标移动事件</p>
+<p>3.用户频繁点击按钮操作</p>
+<p>4.游戏中的一些设计</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://example.com/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/>http://example.com/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-11-22T13:02:31+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Nov 22, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E9%87%8D%E5%86%99%E8%BD%AE%E6%92%AD%E5%9B%BE/">
-        【js原生】重写轮播图
-      </a>
-    </h2>
-  
-  <div class='md'>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/&title=【js进阶】防抖节流 - Hexo&summary=防抖节流"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
     
-      <p>手写banner</p>
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/&title=【js进阶】防抖节流 - Hexo&summary=防抖节流"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/11/22/%E3%80%90js%E8%BF%9B%E9%98%B6%E3%80%91%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/&title=【js进阶】防抖节流 - Hexo&summary=防抖节流"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</div>
+
+
+
         
-        <time>2021-11-22</time>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E9%87%8D%E5%86%99%E8%BD%AE%E6%92%AD%E5%9B%BE/'>
-            Read More
-          </a>
-        </div>
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/11/22/%E3%80%90js%E5%9F%BA%E7%A1%80%E3%80%91%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【js基础】数组常用方法总结</p>
+          <p class='content'>数组常用方法总结
+
+
+不改变原数组1.concat()定义: 链接两个或多个数组，并返回一个新数组
+参数：
+arrayX（必须）：该参数可以是具体的值，也可以是数组对象。可以是任意多个。
+例子：...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E9%87%8D%E5%86%99%E8%BD%AE%E6%92%AD%E5%9B%BE/'>
+          <p class='title'>【js原生】重写轮播图<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>手写banner
+
+
+轮播图的实现结构搭建
+123456789101112131415161718192021222324252627282930313233343536373839404142...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/">
-        【js原生】动画函数的封装
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>封装animate.js动画函数</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91offsetLeft%E3%80%81offsetWidth%E3%80%81clientHeight%E3%80%81scrollLeft%E3%80%81scrollHeight.....%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">
-        【js基础】offsetLeft、offsetWidth、clientHeight、scrollLeft、scrollHeight.....的区别？
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>offset、client、scroll、event..</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90js%E5%8E%9F%E7%94%9F%E3%80%91offsetLeft%E3%80%81offsetWidth%E3%80%81clientHeight%E3%80%81scrollLeft%E3%80%81scrollHeight.....%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90%E9%9D%A2%E8%AF%95%E3%80%91%E5%B8%B8%E8%A7%81%E6%89%8B%E5%86%99%E9%A2%98/">
-        【面试】常见手写题
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>常见手写题</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90%E9%9D%A2%E8%AF%95%E3%80%91%E5%B8%B8%E8%A7%81%E6%89%8B%E5%86%99%E9%A2%98/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/11/22/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">
-        【算法】算法总结
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>包含力扣题</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/11/22/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -757,87 +711,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Hexo</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
+  <header>
     
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
 
-  
 
-  
-    
-    
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF"><span class="toc-text">场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF-1"><span class="toc-text">场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B7%A5%E5%85%B7%E5%BA%93%EF%BC%9A-underscore-lodash"><span class="toc-text">1.直接使用第三方工具库： underscore&#x2F;lodash;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%89%8B%E5%86%99%E9%98%B2%E6%8A%96%E5%87%BD%E6%95%B0"><span class="toc-text">2.手写防抖函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%9F%BA%E6%9C%AC%E7%9A%84%E9%98%B2%E6%8A%96%E5%87%BD%E6%95%B0"><span class="toc-text">2.1 基本的防抖函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-this%E5%92%8C%E2%80%A6agrs"><span class="toc-text">2.2 this和…agrs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C"><span class="toc-text">2.3 立即执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4%EF%BC%9A%E5%8F%96%E6%B6%88%E5%8A%9F%E8%83%BD"><span class="toc-text">2.4：取消功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%89%8B%E5%86%99%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0"><span class="toc-text">3.手写节流函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0"><span class="toc-text">3.1 基本的节流函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-this%E5%92%8C%E2%80%A6args"><span class="toc-text">3.2 this和…args</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E6%8A%96-1"><span class="toc-text">防抖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%82%E6%B5%81-1"><span class="toc-text">节流</span></a></li></ol>
+    </div>
+  </section>
 
-  
 
   
 
 
 </aside>
+
 
 
 		  
@@ -846,21 +741,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="【js进阶】防抖节流";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
